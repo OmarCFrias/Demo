@@ -15,6 +15,7 @@ import { UserService } from './services/user.service';
 import { JwtInterceptor } from './helpers/jwt.interceptor';
 import { fakeBackendProvider } from './helpers/fake-backend';
 import { AuthGuard } from './guards/auth.guard';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AuthGuard } from './guards/auth.guard';
     LoginComponent,
     HomeComponent,
     AlertComponent,
-    RegisterComponent
+    RegisterComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,26 @@
+<header id="asap-mobile-header">
+  <h1 id="asap-admin-header-logo">
+    <a routerLink="/" style="cursor: pointer;">ASAP</a>
+  </h1>
+</header>
+<section>
+  <nav id="asap-admin-nav">
+    <ul class="overflow">
+      <li>
+        <a style="cursor: pointer;">Calendar</a>
+      </li>
+      <li>
+        <a style="cursor: pointer;">Class List</a>
+      </li>
+      <li *ngIf="!IsProfesor">
+        <a style="cursor: pointer;">Family Account</a>
+      </li>
+      <li *ngIf="IsProfesor">
+        <a style="cursor: pointer;">Attendance</a>
+      </li>
+      <li *ngIf="IsProfesor">
+        <a style="cursor: pointer;">Info</a>
+      </li>
+    </ul>
+  </nav>
+</section>
