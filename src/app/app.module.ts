@@ -24,6 +24,10 @@ import { AttendanceComponent } from './attendance/attendance.component';
 
 import { ScheduleModule, CalendarModule } from 'primeng/primeng';
 import { EventService } from './services/event.service';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {DialogModule} from 'primeng/dialog';
+import {OrderListModule} from 'primeng/orderlist';
+import {ButtonModule} from 'primeng/button';
 
 import * as jQuery from 'jquery';
 (window as any).jQuery = (window as any).$ = jQuery;
@@ -50,7 +54,11 @@ import 'fullcalendar-scheduler';
     FormsModule,
     routing,
     ScheduleModule,
-    CalendarModule
+    CalendarModule,
+    NgbModule,
+    DialogModule,
+    OrderListModule,
+    ButtonModule,
   ],
   providers: [
     AuthGuard,
