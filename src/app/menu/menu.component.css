@@ -1,0 +1,15 @@
+.blue {
+    color: #00adee;
+}
+
+h1 {
+    background: url(https://asapconnected.atlassian.net/s/-dpg1b3/b/17/8b80fc05769144aae3c4003ed3e68f7d/_/jira-logo-scaled.png) 50% 50%/50% no-repeat #fff;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 4px 15px rgba(0,0,0,.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,.05);
+    content: '';
+    display: block;
+    height: 90px;
+    margin: 0 auto .9375rem;
+    width: 90px;
+}

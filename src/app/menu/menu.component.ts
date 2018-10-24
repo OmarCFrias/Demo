@@ -8,7 +8,7 @@ import { Router, NavigationEnd } from '@angular/router';
 })
 export class MenuComponent implements OnInit {
 
-  public IsProfesor = false;
+  public IsProfesor = true;
   public isLogin = false;
 
   constructor(private router: Router) {
