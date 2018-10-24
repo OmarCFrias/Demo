@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -8,11 +9,21 @@ import { Component, OnInit } from '@angular/core';
 export class MenuComponent implements OnInit {
 
   public IsProfesor = false;
+  public isLogin = false;
 
-  constructor() { }
+  constructor(private router: Router) {
 
-  ngOnInit() {
-
+    router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+          if (this.router.url.toLowerCase().startsWith('/login')) {
+              this.isLogin = true;
+          } else {
+              this.isLogin = false;
+          }
+        }
+      });
   }
 
+  ngOnInit() {
+  }
 }

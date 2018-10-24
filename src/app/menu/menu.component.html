@@ -1,16 +1,16 @@
-<header>
+<header *ngIf="!isLogin">
   <h1>
     <a routerLink="/" style="cursor: pointer;">ASAP</a>
   </h1>
 </header>
-<section>
+<section *ngIf="!isLogin">
   <nav>
     <ul class="overflow">
       <li>
         <a style="cursor: pointer;">Calendar</a>
       </li>
       <li>
-        <a style="cursor: pointer;">Class List</a>
+        <a style="cursor: pointer;" [routerLink]="['/classlist']">Class List</a>
       </li>
       <li *ngIf="!IsProfesor">
         <a style="cursor: pointer;">Family Account</a>
