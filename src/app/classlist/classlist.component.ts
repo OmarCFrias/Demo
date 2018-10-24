@@ -21,25 +21,40 @@ export class ClasslistComponent implements OnInit {
 
     this.classes =  [
       {
-        'Name': 'Class 1',
-        'Date': '2018-10-24T08:00:00',
-        'Time': '08:00:00'
+        'Name': 'Chemestry',
+        'Date': '2018-10-24',
+        'Time': '08:00:00',
+        'alarm': true,
       }, {
-        'Name': 'Class 2',
-        'Date': '2018-10-24T08:00:00',
-        'Time': '08:00:00'
+        'Name': 'Ballet',
+        'Date': '2018-11-01',
+        'Time': '10:00:00',
+        'alarm': false,
       }, {
-        'Name': 'Class 3',
-        'Date': '2018-10-24T08:00:00',
-        'Time': '08:00:00'
+        'Name': 'Math',
+        'Date': '2018-11-02',
+        'Time': '08:30:00',
+        'alarm': true,
       }, {
-        'Name': 'Class 4',
-        'Date': '2018-10-24T08:00:00',
-        'Time': '08:00:00'
+        'Name': 'Learn Angular',
+        'Date': '2018-10-30',
+        'Time': '08:30:00',
+        'alarm': true,
       }, {
-        'Name': 'Class 5',
-        'Date': '2018-10-24T08:00:00',
-        'Time': '08:00:00'
+        'Name': 'Music Guitar',
+        'Date': '2018-10-26',
+        'Time': '09:30:00',
+        'alarm': false,
+      }, {
+        'Name': 'Music Piano',
+        'Date': '2018-10-26',
+        'Time': '10:00:00',
+        'alarm': true,
+      }, {
+        'Name': 'Music Drums',
+        'Date': '2018-10-26',
+        'Time': '10:30:00',
+        'alarm': false,
       }
   ];
   }
