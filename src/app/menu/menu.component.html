@@ -14,11 +14,11 @@
         <a style="cursor: pointer;" [routerLink]="['/classlist']"> <span class="glyphicon glyphicon-th-list blue"></span>
           Class List</a>
       </li>
-      <li *ngIf="!IsProfesor">
+      <li>
         <a style="cursor: pointer;" [routerLink]="['/familyaccount']"> <span class="glyphicon glyphicon-user blue"></span>
           Family Account</a>
       </li>
-      <li *ngIf="IsProfesor">
+      <li>
         <a style="cursor: pointer;" [routerLink]="['/attendance']"> <span class="glyphicon glyphicon-check blue"></span>
           Attendance</a>
       </li>

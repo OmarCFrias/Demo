@@ -40,8 +40,9 @@
   </ng-template>
 </p-dataView>
 
-<p-dialog header="Class Attendance" [(visible)]="displayDialog" [responsive]="true" showEffect="fade" [modal]="true"
-  [contentStyle]="{'overflow':'visible'}" width="950" (onAfterHide)="onDialogHide()">
+<p-dialog header="Class Attendance" [(visible)]="displayDialog" [responsive]="true" showEffect="fade" [modal]="true" [draggable]="true"
+[blockScroll]="true"
+ (onAfterHide)="onDialogHide()">
   <div class="ui-g" *ngIf="selectedClas">
     <div class="ui-g-12" style="text-align:center">
       <img src="../../assets/images/class1.jfif" width="100" height="80">

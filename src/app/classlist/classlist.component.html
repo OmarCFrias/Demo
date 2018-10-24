@@ -10,11 +10,11 @@
 
 <p-dialog header="Set Alarm" [(visible)]="display" [modal]="true" [responsive]="true" [maximizable]="false"
   [baseZIndex]="10000">
-  <span>Please select a date and time to set the alarm</span>
+  <span>Please select a date and time to set the alarm <br><br></span> 
   <div class="ui-g ui-fluid">
     <div>
       <p-calendar [(ngModel)]="date1" [inline]="true" [maxDateCount]="31" selectionMode="multiple"></p-calendar>
-    </div>
+    </div>&nbsp;&nbsp;
     <div>
       <p-calendar [(ngModel)]="date8" [timeOnly]="true" [inline]="true"></p-calendar>
     </div>
