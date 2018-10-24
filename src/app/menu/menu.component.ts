@@ -10,6 +10,7 @@ export class MenuComponent implements OnInit {
 
   public IsProfesor = true;
   public isLogin = false;
+  show = false;
 
   constructor(private router: Router) {
 

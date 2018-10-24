@@ -99,7 +99,7 @@ export class CalendarComponent implements OnInit {
     };
     this.showMultiple();
     // tslint:disable-next-line:member-ordering
-  Observable.interval(2000 * 60).subscribe(x => {
+  Observable.interval(10000).subscribe(x => {
     this.showOneMore();
   });
   }

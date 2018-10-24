@@ -23,6 +23,7 @@ import { OrganizationinfoComponent } from './organizationinfo/organizationinfo.c
 import { AttendanceComponent } from './attendance/attendance.component';
 
 import { ScheduleModule, CalendarModule, GrowlModule, DialogModule } from 'primeng/primeng';
+import { NgbModule} from '@ng-bootstrap/ng-bootstrap',
 
 import { EventService } from './services/event.service';
 import {OrderListModule} from 'primeng/orderlist';
@@ -54,6 +55,7 @@ import { MessageService } from 'primeng/components/common/messageservice';
     NotificationComponent,
   ],
   imports: [
+    NgbModule.forRoot(),
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,

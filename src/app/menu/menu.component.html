@@ -1,33 +1,38 @@
-<header *ngIf="!isLogin">
-  <h1>
-    <h1></h1>
-    <a routerLink="/" style="cursor: pointer; font-size: 16px; margin-left: -80px;" class="blue">Home</a>
-  </h1>
-</header>
-<section *ngIf="!isLogin">
-  <nav>
-    <ul class="overflow" style="margin-top: 50px; margin-bottom: 15px;">
-      <li>
-        <a style="cursor: pointer;" [routerLink]="['/calendar']"> <span class="glyphicon glyphicon-calendar blue"></span>
-          Calendar</a>
-      </li>
-      <li>
-        <a style="cursor: pointer;" [routerLink]="['/classlist']"> <span class="glyphicon glyphicon-th-list blue"></span>
-          Class List</a>
-      </li>
-      <li *ngIf="!IsProfesor">
-        <a style="cursor: pointer;" [routerLink]="['/familyaccount']"> <span class="glyphicon glyphicon-user blue"></span>
-          Family Account</a>
-      </li>
-      <li *ngIf="IsProfesor">
-        <a style="cursor: pointer;" [routerLink]="['/attendance']"> <span class="glyphicon glyphicon-check blue"></span>
-          Attendance</a>
-      </li>
-      <li>
-        <a style="cursor: pointer;" [routerLink]="['/organizationinfo']"> <span class="glyphicon glyphicon-info-sign blue"></span>
-          Organization
-          Info</a>
-      </li>
-    </ul>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" [ngClass]="{'navbar-toggle collapsed': show, 'navbar-toggle': !show}" (click)="show = !show" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">ASAP</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse " [ngClass]="{'in': show}" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"> <a style="cursor: pointer;" [routerLink]="['/calendar']" (click)="show =!show"> <span class="glyphicon glyphicon-calendar blue"></span>
+            Calendar</a></li>
+          <li><a style="cursor: pointer;" (click)="show =!show" [routerLink]="['/classlist']"> <span class="glyphicon glyphicon-th-list blue"></span>
+            Class List</a></li>
+          <li *ngIf="!IsProfesor">
+              <a style="cursor: pointer;" (click)="show =!show" [routerLink]="['/familyaccount']"> <span class="glyphicon glyphicon-user blue"></span>
+                Family Account</a>
+          </li>
+          <li *ngIf="IsProfesor">
+            <a style="cursor: pointer;" (click)="show =!show" [routerLink]="['/attendance']"> <span class="glyphicon glyphicon-check blue"></span>
+            Attendance</a>
+          </li>
+          <li>
+              <a style="cursor: pointer;" (click)="show =!show" [routerLink]="['/organizationinfo']"> <span class="glyphicon glyphicon-info-sign blue"></span>
+                Organization
+                Info</a>
+            </li>
+        </ul>
+
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
   </nav>
-</section>
