@@ -27,6 +27,9 @@ import { ScheduleModule, CalendarModule, GrowlModule, DialogModule } from 'prime
 import { EventService } from './services/event.service';
 import {OrderListModule} from 'primeng/orderlist';
 import {ButtonModule} from 'primeng/button';
+import {DataViewModule} from 'primeng/dataview';
+import {DropdownModule} from 'primeng/dropdown';
+import {SpinnerModule} from 'primeng/spinner';
 
 import * as jQuery from 'jquery';
 (window as any).jQuery = (window as any).$ = jQuery;
@@ -62,6 +65,9 @@ import { MessageService } from 'primeng/components/common/messageservice';
     DialogModule,
     OrderListModule,
     ButtonModule,
+    DropdownModule,
+    DataViewModule,
+    SpinnerModule,
   ],
   providers: [
     AuthGuard,
