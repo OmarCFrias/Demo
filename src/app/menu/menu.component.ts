@@ -15,7 +15,7 @@ export class MenuComponent implements OnInit {
 
     router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-          if (this.router.url.toLowerCase().startsWith('/login')) {
+          if (this.router.url.toLowerCase().startsWith('/login') || this.router.url.toLowerCase().startsWith('/register')) {
               this.isLogin = true;
           } else {
               this.isLogin = false;

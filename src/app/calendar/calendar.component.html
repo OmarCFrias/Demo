@@ -1,2 +1,22 @@
-<p-schedule [events]="events" [header]="header" defaultDate="2018-10-24" [eventLimit]="4" [defaultView]="'agendaDay'" [editable]="true"></p-schedule>
+<p-schedule
+  [events]="events"
+  [header]="header"
+  defaultDate="2018-10-24"
+  [eventLimit]="4"
+  [defaultView]="'agendaDay'"
+  [editable]="true"
+  (onEventClick)="handleEventClick($event.calEvent)"></p-schedule>
+
+  <p-dialog [(visible)]="display" [width]="300">
+    <p-header>
+      Class detail
+    </p-header>
+      <p>Class name: {{selectedClass.name}}</p>
+      <p>Location: {{selectedClass.location}}</p>
+      <p>Days: {{selectedClass.days}}</p>
+    <p-footer>
+      <button pButton type="button" icon="pi pi-check" iconPos="left"(click)="display = !display" >Ok</button>
+    </p-footer>
+  </p-dialog>
+
 <p-growl [(value)]="msgs"></p-growl>
