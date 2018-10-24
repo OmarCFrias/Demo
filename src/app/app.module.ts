@@ -22,12 +22,16 @@ import { FamilyaccountComponent } from './familyaccount/familyaccount.component'
 import { OrganizationinfoComponent } from './organizationinfo/organizationinfo.component';
 import { AttendanceComponent } from './attendance/attendance.component';
 
-import { ScheduleModule, CalendarModule } from 'primeng/primeng';
+import { ScheduleModule, CalendarModule, GrowlModule} from 'primeng/primeng';
+
 import { EventService } from './services/event.service';
 
 import * as jQuery from 'jquery';
 (window as any).jQuery = (window as any).$ = jQuery;
 import 'fullcalendar-scheduler';
+import { NotificationComponent } from './notification/notification.component';
+import { MessageService } from 'primeng/components/common/messageservice';
+
 
 @NgModule({
   declarations: [
@@ -41,7 +45,8 @@ import 'fullcalendar-scheduler';
     ClasslistComponent,
     FamilyaccountComponent,
     OrganizationinfoComponent,
-    AttendanceComponent
+    AttendanceComponent,
+    NotificationComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,7 +55,8 @@ import 'fullcalendar-scheduler';
     FormsModule,
     routing,
     ScheduleModule,
-    CalendarModule
+    CalendarModule,
+    GrowlModule
   ],
   providers: [
     AuthGuard,
@@ -63,7 +69,8 @@ import 'fullcalendar-scheduler';
       multi: true
     },
     fakeBackendProvider,
-    EventService
+    EventService,
+    MessageService
   ],
   bootstrap: [AppComponent]
 })
