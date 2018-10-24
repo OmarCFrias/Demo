@@ -16,6 +16,11 @@ import { UserService } from './services/user.service';
 import { JwtInterceptor } from './helpers/jwt.interceptor';
 import { fakeBackendProvider } from './helpers/fake-backend';
 import { AuthGuard } from './guards/auth.guard';
+import { MenuComponent } from './menu/menu.component';
+import { ClasslistComponent } from './classlist/classlist.component';
+import { FamilyaccountComponent } from './familyaccount/familyaccount.component';
+import { OrganizationinfoComponent } from './organizationinfo/organizationinfo.component';
+import { AttendanceComponent } from './attendance/attendance.component';
 
 import { ScheduleModule, CalendarModule } from 'primeng/primeng';
 import { EventService } from './services/event.service';
@@ -31,7 +36,12 @@ import 'fullcalendar-scheduler';
     LoginComponent,
     HomeComponent,
     AlertComponent,
-    RegisterComponent
+    RegisterComponent,
+    MenuComponent,
+    ClasslistComponent,
+    FamilyaccountComponent,
+    OrganizationinfoComponent,
+    AttendanceComponent
   ],
   imports: [
     BrowserModule,

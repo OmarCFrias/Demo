@@ -1,0 +1,26 @@
+<header *ngIf="!isLogin">
+  <h1>
+    <a routerLink="/" style="cursor: pointer;">ASAP</a>
+  </h1>
+</header>
+<section *ngIf="!isLogin">
+  <nav>
+    <ul class="overflow">
+      <li>
+        <a style="cursor: pointer;" [routerLink]="['/calendar']">Calendar</a>
+      </li>
+      <li>
+        <a style="cursor: pointer;" [routerLink]="['/classlist']">Class List</a>
+      </li>
+      <li *ngIf="!IsProfesor">
+        <a style="cursor: pointer;" [routerLink]="['/familyaccount']">Family Account</a>
+      </li>
+      <li *ngIf="IsProfesor">
+        <a style="cursor: pointer;" [routerLink]="['/attendance']">Attendance</a>
+      </li>
+      <li *ngIf="IsProfesor">
+        <a style="cursor: pointer;" [routerLink]="['/organizationinfo']">Organization Info</a>
+      </li>
+    </ul>
+  </nav>
+</section>
