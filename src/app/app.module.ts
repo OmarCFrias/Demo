@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { CalendarComponent } from './calendar/calendar.component';
@@ -16,6 +17,13 @@ import { JwtInterceptor } from './helpers/jwt.interceptor';
 import { fakeBackendProvider } from './helpers/fake-backend';
 import { AuthGuard } from './guards/auth.guard';
 
+import { ScheduleModule, CalendarModule } from 'primeng/primeng';
+import { EventService } from './services/event.service';
+
+import * as jQuery from 'jquery';
+(window as any).jQuery = (window as any).$ = jQuery;
+import 'fullcalendar-scheduler';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,9 +35,12 @@ import { AuthGuard } from './guards/auth.guard';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
-    routing
+    routing,
+    ScheduleModule,
+    CalendarModule
   ],
   providers: [
     AuthGuard,
@@ -41,7 +52,8 @@ import { AuthGuard } from './guards/auth.guard';
       useClass: JwtInterceptor,
       multi: true
     },
-    fakeBackendProvider
+    fakeBackendProvider,
+    EventService
   ],
   bootstrap: [AppComponent]
 })
