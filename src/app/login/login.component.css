@@ -1,0 +1,88 @@
+h1 {
+    background: url(https://asapconnected.atlassian.net/s/-dpg1b3/b/17/8b80fc05769144aae3c4003ed3e68f7d/_/jira-logo-scaled.png) 50% 50%/50% no-repeat #fff;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 4px 15px rgba(0,0,0,.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,.05);
+    content: '';
+    display: block;
+    height: 90px;
+    margin: 0 auto .9375rem;
+    width: 90px;
+}
+
+h2 {
+    border-bottom: 1px solid #e8ecef;
+    display: block;
+    font-size: 1.9rem;
+    font-weight: 900;
+    line-height: 1;
+    margin: 0 auto 1.875rem;
+    max-width: 240px;
+    max-width: 15rem;
+    padding: 0 0 1.875rem;
+    text-align: center;
+    text-transform: uppercase;
+    font:300 1.4em/2.4 'Nunito', sans-serif;
+    border-bottom-width: 1px;
+}
+
+h3 {
+    border-bottom: 1px solid #e8ecef;
+    display: block;
+    font-size: 1.9rem;
+    font-weight: 900;
+    line-height: 1;
+    margin: 0 auto 1.875rem;
+    max-width: 240px;
+    max-width: 15rem;
+    padding: 0 0 1.875rem;
+    text-align: center;
+    text-transform: uppercase;
+    font:300 1.5em/1.4 'Nunito', sans-serif;
+}
+
+input:not([type=checkbox]):not([type=radio]) {
+    background-position: 20px 50%;
+        background-repeat: no-repeat;
+        background-size: 16px;
+        border: none;
+        border-radius: 5px;
+        -webkit-box-shadow: 0 4px 15px rgba(0,0,0,.05);
+        box-shadow: 0 4px 15px rgba(0,0,0,.05);
+        display: block;
+        font-size: 1.2500rem;
+        margin-left: auto;
+        margin-right: auto;
+        padding: .9375rem .9375rem .9375rem 3.125rem;
+        text-align: left;
+    }
+
+.btn-primary {
+        background: #00adee;
+        width: 130px;
+        border: 1px solid transparent;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        box-shadow: 0 2px 2px rgba(0,0,0,.05);
+        color: #fff;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 400;
+        height: calc(1.80em + 1rem + 3px);
+        line-height: calc(1.25em + 1rem + 3px);
+        padding: 0 40px;
+        transition: all .1s ease-in-out !important;
+        margin-top: 20px;
+    }
+
+.btn-r
+{
+    margin-left: 31px;
+    margin-top: 20px;
+}
+
+.jumbotron {
+    height: 860px !important;
+    background: #f5f6f7 !important;
+}

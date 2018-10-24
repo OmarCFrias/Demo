@@ -7,19 +7,19 @@
   <nav>
     <ul class="overflow">
       <li>
-        <a style="cursor: pointer;">Calendar</a>
+        <a style="cursor: pointer;" [routerLink]="['/calendar']">Calendar</a>
       </li>
       <li>
         <a style="cursor: pointer;" [routerLink]="['/classlist']">Class List</a>
       </li>
       <li *ngIf="!IsProfesor">
-        <a style="cursor: pointer;">Family Account</a>
+        <a style="cursor: pointer;" [routerLink]="['/familyaccount']">Family Account</a>
       </li>
       <li *ngIf="IsProfesor">
-        <a style="cursor: pointer;">Attendance</a>
+        <a style="cursor: pointer;" [routerLink]="['/attendance']">Attendance</a>
       </li>
       <li *ngIf="IsProfesor">
-        <a style="cursor: pointer;">Info</a>
+        <a style="cursor: pointer;" [routerLink]="['/organizationinfo']">Organization Info</a>
       </li>
     </ul>
   </nav>

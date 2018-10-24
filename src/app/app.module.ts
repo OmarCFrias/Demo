@@ -17,6 +17,9 @@ import { fakeBackendProvider } from './helpers/fake-backend';
 import { AuthGuard } from './guards/auth.guard';
 import { MenuComponent } from './menu/menu.component';
 import { ClasslistComponent } from './classlist/classlist.component';
+import { FamilyaccountComponent } from './familyaccount/familyaccount.component';
+import { OrganizationinfoComponent } from './organizationinfo/organizationinfo.component';
+import { AttendanceComponent } from './attendance/attendance.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { ClasslistComponent } from './classlist/classlist.component';
     AlertComponent,
     RegisterComponent,
     MenuComponent,
-    ClasslistComponent
+    ClasslistComponent,
+    FamilyaccountComponent,
+    OrganizationinfoComponent,
+    AttendanceComponent
   ],
   imports: [
     BrowserModule,
