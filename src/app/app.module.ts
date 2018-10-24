@@ -22,9 +22,11 @@ import { FamilyaccountComponent } from './familyaccount/familyaccount.component'
 import { OrganizationinfoComponent } from './organizationinfo/organizationinfo.component';
 import { AttendanceComponent } from './attendance/attendance.component';
 
-import { ScheduleModule, CalendarModule, GrowlModule} from 'primeng/primeng';
+import { ScheduleModule, CalendarModule, GrowlModule, DialogModule } from 'primeng/primeng';
 
 import { EventService } from './services/event.service';
+import {OrderListModule} from 'primeng/orderlist';
+import {ButtonModule} from 'primeng/button';
 
 import * as jQuery from 'jquery';
 (window as any).jQuery = (window as any).$ = jQuery;
@@ -56,7 +58,10 @@ import { MessageService } from 'primeng/components/common/messageservice';
     routing,
     ScheduleModule,
     CalendarModule,
-    GrowlModule
+    GrowlModule,
+    DialogModule,
+    OrderListModule,
+    ButtonModule,
   ],
   providers: [
     AuthGuard,

@@ -1,28 +1,18 @@
-Class List
-
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button>
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Set Alarm</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-          <!-- <ngb-timepicker [(ngModel)]="time"></ngb-timepicker> -->
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+<p-orderList [value]="classes" [listStyle]="{'height':'250px'}" header="Classes" filter="filter" filterBy="Name"
+  filterPlaceholder="Filter by name" dragdrop="true" dragdropScope="classes">
+  <ng-template let-clas pTemplate="item">
+    <div class="ui-helper-clearfix" (click)="showDialog()">
+      <img src="../../assets/images/class1.jfif" style="display:inline-block;margin:2px 0 2px 2px" width="48">
+      <div style="font-size:14px;float:right;margin:15px 5px 0 0">{{clas.Name}} - {{clas.Date}} - {{clas.Time}}</div>
     </div>
-  </div>
-</div>
-<script>
+  </ng-template>
+</p-orderList>
 
-</script>
+<p-dialog header="Set Alarm" [(visible)]="display" [modal]="true" [responsive]="true" [width]="350" [minWidth]="200"
+  [minY]="70" [maximizable]="true" [baseZIndex]="10000">
+  <span>Please select a date and time to set the alarm</span>
+  <p-footer>
+    <button type="button" pButton (click)="display=false" label="Save"></button>
+    <button type="button" pButton (click)="display=false" label="Close" class="ui-button-secondary"></button>
+  </p-footer>
+</p-dialog>
